@@ -3,7 +3,9 @@ import './App.css'
 
 function App() {
   const [length, setLength] = useState(8)
+  // eslint-disable-next-line no-unused-vars
   const [numberAllowed, setNumberAllowed] = useState(false)
+  // eslint-disable-next-line no-unused-vars
   const [charAllowed, setCharAllowed] = useState(false)
   const passwordRef = useRef(null)
 
@@ -26,7 +28,7 @@ function App() {
 
   useEffect(() => {
     generatePassword()
-  }, [length, numberAllowed, charAllowed])
+  }, [length, numberAllowed, charAllowed, generatePassword])
 
   const copyPasswordToClipboard = () => {
     window.navigator.clipboard.writeText(password)
